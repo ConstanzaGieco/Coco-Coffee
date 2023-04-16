@@ -1,0 +1,470 @@
+@import "keyframes";
+@import "variables";
+@import "mixins";
+
+
+/* CARTA ONLINE */
+
+.carta-online {
+    grid-column: 1/5;
+
+    .cuerpo {
+        display: grid;
+        grid-template-rows: 150px auto auto!important;
+
+        @include large_desktops{
+            grid-template-rows: 300px auto auto!important;
+        }
+
+        @include desktops{
+            grid-template-rows: 250px auto auto!important;
+        }
+
+        @include tablets{
+            grid-template-rows: 200px auto auto!important;
+        }
+
+        @include landscape_phones{
+            grid-template-rows: 200px auto auto!important;
+        }
+
+        @include phones_plus{
+            grid-template-rows: 200px auto auto!important;
+        }
+
+        .segunda{
+            grid-row: 2/3;
+            padding: 30px;
+
+            @include large_desktops{
+                padding: 100px;
+            }
+
+            @include desktops{
+                padding: 100px;
+            }
+
+            @include tablets {
+                padding: 100px;
+            }
+
+            @include landscape_phones{
+                padding: 80px;
+            }
+
+            @include phones_plus {
+                padding: 50px;
+            }
+
+            @include phones_details{
+                padding: 40px;
+            }
+
+            .pdfs{
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                @include large_desktops{
+                    gap: 150px;
+                }
+                
+                @include desktops {
+                    gap: 150px;
+                }
+
+                @include tablets{
+                    gap: 80px;
+                }
+
+                @include landscape_phones{
+                    gap: 60px;
+                }
+
+                @include phones_plus{
+                    gap: 60px;
+                }
+
+                @include phones_details{
+                    gap: 40px;
+                }
+
+                .primero {
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+
+                    &::after{
+                        position: relative;
+                        display: block;
+                        content: "";
+                        width: 1.5px;
+                        height: 100%;
+                        background-color: $colorAfter;
+                        left: 10%;
+                        bottom: 60%;
+                        z-index: 0;
+
+                        @include large_desktops{
+                            bottom: 40%;
+                        }
+                        
+                        @include desktops {
+                            bottom: 40%;
+                        }
+
+                        @include tablets{
+                            bottom: 50%;
+                        }
+
+                        @include landscape_phones{
+                            bottom: 50%;
+                        }
+
+                        @include phones_plus{
+                            bottom: 50%;
+                        }
+
+                        @include phones_details{
+                            bottom: 50%;
+                        }
+
+                    }
+
+                    .fondo-uno {
+                        width: 100%;
+                        height: 15vw;
+                        overflow: hidden;
+                        background-image: url(../03.\ Imagenes/Fondooscurocarta.jpg);
+                        box-shadow: $boxShadow;
+                    }
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 15vw;
+                        margin-top: -35%;
+                        right: 10%;
+                        z-index: 5;
+                        box-shadow: $boxShadow;
+                        filter: brightness(80%);
+                    }
+
+                    .titulo-uno {
+                        position: relative;
+                        margin-top: -30%;
+                        right: 10%;
+                        z-index: 6;
+                        text-align: center;
+
+                        h2 {
+                            font-size: 3.5vw;
+                            color: #fff;
+                            background-color: $colorAfter;
+                            font-style: italic;
+                        }
+
+                        @include large_desktops{
+                            margin-top: -25%;
+                        }
+
+                        @include desktops {
+                            margin-top: -25%;
+                        }
+                    }
+
+                    .link {
+                        position: relative;
+                        top: 20%;
+                        text-align: center;
+                        color: $colorPrincipal;
+                        font-size: 3vw;
+
+                        @include large_desktops{
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include desktops {
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            top: 40%;
+                        }
+
+                        @include phones_plus{
+                            top: 40%;
+                        }
+
+                        @include phones_plus{
+                            top: 40%;
+                        }
+
+                        @include phones_details{
+                            top: 35%;
+                        }
+                    }
+                }
+
+                .segundo {
+                    grid-row: 2/3;
+                    grid-column: 2/3;
+
+                    &::after {
+                        position: relative;
+                        display: block;
+                        content: "";
+                        width: 1.5px;
+                        height: 100%;
+                        background-color: $colorAfter;
+                        left: 10%;
+                        bottom: 60%;
+                        z-index: 0;
+
+                        @include large_desktops{
+                            bottom: 40%;
+                        }
+
+                        @include desktops {
+                            bottom: 40%;
+                        }
+
+                        @include tablets{
+                            bottom: 50%;
+                        }
+
+                        @include landscape_phones{
+                            bottom: 50%;
+                        }
+
+                        @include phones_plus{
+                            bottom: 50%;
+                        }
+
+                        @include phones_details{
+                            bottom: 50%;
+                        }
+
+                    }
+
+                    .fondo-uno {
+                        width: 100%;
+                        height: 15vw;
+                        overflow: hidden;
+                        background-image: url(../03.\ Imagenes/Fondooscurocarta.jpg);
+                        box-shadow: $boxShadow;
+                    }
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 15vw;
+                        margin-top: -35%;
+                        right: 10%;
+                        z-index: 5;
+                        box-shadow: $boxShadow;
+                        filter: brightness(80%);
+                    }
+
+                    .titulo-dos {
+                        position: relative;
+                        margin-top: -30%;
+                        right: 10%;
+                        z-index: 6;
+                        text-align: center;
+
+                        h2 {
+                            font-size: 3.5vw;
+                            color: #fff;
+                            background-color: $colorAfter;
+                            font-style: italic;
+                        }
+
+                        @include large_desktops{
+                            margin-top: -25%;
+                        }
+
+                        @include desktops {
+                            margin-top: -25%;
+                        }
+
+                    }
+
+                    .link {
+                        position: relative;
+                        top: 20%;
+                        font-size: 3vw;
+                        text-align: center;
+                        color: $colorPrincipal;
+
+                        @include large_desktops{
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include desktops {
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            top: 40%;
+                        }
+
+                        @include landscape_phones{
+                            top: 40%;
+                        }
+
+                        @include phones_plus{
+                            top: 40%;
+                        }
+
+                        @include phones_details{
+                            top: 35%;
+                        }
+                    }
+                }
+
+                .tercero {
+                    grid-row: 3/4;
+                    grid-column: 1/2;
+
+                    &::after {
+                        position: relative;
+                        display: block;
+                        content: "";
+                        width: 1.5px;
+                        height: 100%;
+                        background-color: $colorAfter;
+                        left: 10%;
+                        bottom: 60%;
+                        z-index: 0;
+
+                        @include large_desktops{
+                            bottom: 40%;
+                        }
+
+                        @include desktops {
+                            bottom: 40%;
+                        }
+
+                        @include tablets{
+                            bottom: 50%;
+                        }
+
+                        @include landscape_phones{
+                            bottom: 50%;
+                        }
+
+                        @include phones_plus{
+                            bottom: 50%;
+                        }
+
+                        @include phones_details{
+                            bottom: 50%;
+                        }
+
+                    }
+
+                    .fondo-uno {
+                        width: 100%;
+                        height: 15vw;
+                        overflow: hidden;
+                        background-image: url(../03.\ Imagenes/Fondooscurocarta.jpg);
+                        box-shadow: $boxShadow;
+                    }
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 15vw;
+                        margin-top: -35%;
+                        right: 10%;
+                        z-index: 5;
+                        box-shadow: $boxShadow;
+                        filter: brightness(80%);
+                    }
+
+                    .titulo-tres {
+                        position: relative;
+                        margin-top: -30%;
+                        right: 10%;
+                        z-index: 6;
+                        text-align: center;
+
+                        h2 {
+                            font-size: 3.5vw;
+                            color: #fff;
+                            background-color: $colorAfter;
+                            font-style: italic;
+                        }
+
+                        @include large_desktops{
+                            margin-top: -25%;
+                        }
+
+                        @include desktops {
+                            margin-top: -25%;
+                        }
+
+                    }
+
+                    .link {
+                        position: relative;
+                        top: 20%;
+                        font-size: 3vw;
+                        text-align: center;
+                        color: $colorPrincipal;
+
+                        @include large_desktops{
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include desktops {
+                            top: 50%;
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            top: 40%;
+                        }
+
+                        @include landscape_phones{
+                            top: 40%;
+                        }
+
+                        @include phones_plus{
+                            top: 40%;
+                        }
+
+                        @include phones_details{
+                            top: 35%;
+                        }
+                    }
+                }
+
+                .link_carta{
+                    color: $colorPrincipal;
+
+                    &:visited {
+                        color: $colorPrincipal;
+                    }
+
+                    &:hover {
+                        border-bottom: $colorPrincipal solid 1px;
+                        transition: all 0.5s;
+                        font-size: 2.2vw;
+                        color: $colorPrincipal;
+                    }
+                }                
+            }
+        }
+
+        .quinta {
+            padding-top: 10%;
+        }
+    }
+}

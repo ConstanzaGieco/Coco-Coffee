@@ -1,0 +1,40 @@
+@keyframes movimiento_abajo {
+    0% {
+        transform: translateY(0%);
+    }
+
+    40% {
+        transform: translateY(40%);
+    }
+}
+
+@keyframes movimiento_lateral_lento {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(30%);
+    }
+}
+
+@keyframes movimiento_lateral {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(20%);
+    }
+}
+
+@keyframes movimiento_abajo_corto {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(20%);
+    }
+}
+

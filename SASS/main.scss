@@ -1,0 +1,386 @@
+@import "keyframes";
+@import "variables";
+@import "mixins";
+
+@import "index";
+@import "reserva";
+@import "nosotros";
+@import "contacto";
+@import "carta";
+
+
+
+//CSS páginas en general
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Heebo;
+    font-weight: 600 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Encabezado y pie de página para todas las páginas
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px auto auto;
+
+    @include large_desktops{
+        grid-template-rows: 800px auto auto;
+    }
+
+    @include desktops{
+        grid-template-rows: 600px auto auto;
+    }
+
+    @include tablets{
+        grid-template-rows: 600px auto auto;
+    }
+
+    @include landscape_phones{
+        grid-template-rows: 550px auto auto;
+    }
+
+    @include phones_plus{
+        grid-template-rows: 500px auto auto;
+    }
+
+    @include phones_details{
+        grid-template-rows: 400px auto auto;
+    }
+
+    /* ENCABEZADO */
+
+    header {
+        grid-column: 1/5;
+        grid-row: 1/2;
+
+        .imagen-principal-logo-box {
+            width: 100%;
+            height: 100%;
+
+            .imagen-principal {
+                width: 100%;
+                height: 100%;
+                filter: brightness(60%);
+                object-fit: cover;
+            }
+
+            .overlay h1 {
+                position: absolute;
+                top: 40vw;
+                left: 15%;
+                text-align: center;
+                font-size: 6vw;
+                color: #fff;
+                letter-spacing: 0.10em;
+
+                @include large_desktops{
+                    top: 30vw;
+                }
+
+                @include desktops{
+                    top: 30vw;
+                }
+
+                @include tablets{
+                    top: 25vw;
+                }
+
+                @include landscape_phones{
+                    top: 45vw;
+                }
+
+                @include phones_plus {
+                    top: 45vw;
+                }
+
+                @include phones_details{
+                    top: 50vw;
+                }
+            }
+
+            .arrow {
+                margin: -10% auto;
+                width: 5%;
+
+                @include large_desktops{
+                    margin: -5% auto;
+                }
+
+                @include desktops {
+                    margin: -5% auto;
+                }
+
+                @include tablets{
+                    margin: -7% auto;
+                }
+
+                @include phones_details{
+                    margin: -7% auto;
+                }
+
+                .scroll-button {
+                    position: absolute;
+                    background-color: $colorTransparente;
+                    border-color: $colorTransparente;
+                    font-size: 2.5vw;
+                    color: #fff;
+                    letter-spacing: .10em;
+                    font-weight: 400;
+                    animation-name: movimiento_abajo;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+
+                    @include large_desktops{
+                        font-size: 1.5vw;
+                    }
+
+                    @include desktops {
+                        font-size: 1.5vw;
+                    }
+
+                    @include tablets{
+                        font-size: 2vw;
+                    }
+
+                    @include phones_details{
+                        font-size: 1.7vw;
+                    }
+                }
+            }
+        }
+
+        .navbar-expand-md {
+            box-shadow: $boxShadow;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 20vw;
+            transition: 0.7s;
+            background-color: $colorTransparente;
+            z-index: 100;
+
+            @include large_desktops {
+                height: 8vw;
+            }
+
+            @include desktops{
+                height: 10vw;
+            }
+
+            @include tablets{
+                height: 12vw;
+            }
+
+            .navbar-brand {
+                width: 50px;
+                height: 50px;
+                background-image: url(../03.\ Imagenes/LogoBlanco.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @include large_desktops{
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include desktops{
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include phones_plus {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include tablets{
+                    width: 90px;
+                    height: 90px;
+                }
+
+                @include landscape_phones{
+                    width: 120px;
+                    height: 120px;
+                }
+
+                @include phones_details{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .navbar-toggler {
+                border-color: $colorTransparente;
+                color: $colorTransparente !important;
+
+                .navbar-toggler-icon {
+                    width: 25px;
+                    height: 25px;
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+                    @include landscape_phones {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    @include phones_plus{
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    @include phones_details{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+
+                ul{
+
+                    @include large_desktops{
+                        width: 100%;
+                    }
+
+                    @include tablets{
+                        width: 100%;
+                    }
+
+                    @include desktops{
+                        width: 100%;
+                    }
+                }
+                
+                ul li {
+                    text-align: center;
+                    position: relative;
+                    left: 60%;
+                    width: 40%;
+
+                    @include large_desktops{
+                        left: 0%;
+                    }
+
+                    @include desktops{
+                        left: 0%;
+                    }
+
+                    @include tablets {
+                        left: 0%;
+                    }
+                }
+
+                .active {
+                    color: #fff;
+                    font-size: 2.5vw;
+
+                    @include large_desktops{
+                        font-size: 1.7vw;
+                    }
+
+                    @include desktops {
+                        font-size: 1.7vw;
+                    }
+
+                    @include tablets{
+                        font-size: 1.8vw;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    font-size: 2.2vw;
+                    color: #fff;
+                    letter-spacing: 0.2em;
+
+                    &:hover {
+                        color: $colorLetras;
+                    }
+
+                    @include large_desktops{
+                        font-size: 1.4vw;
+                    }
+
+                     @include desktops {
+                        font-size: 1.4vw;
+                    }
+
+                    @include tablets{
+                        font-size: 1.5vw;
+                    }
+                }
+
+                .reserva {
+                    background-color: $colorReserva;
+
+                    &:hover {
+                        background-color: $colorHover;
+                    }
+                }
+            }
+        }
+    }
+
+    // Header en blanco al hacer scroll
+
+    .abajo{
+        .navbar-expand-md {
+            background: #fff;
+        }
+
+        .navbar-brand {
+            background-image: url(../03.\ Imagenes/LogoNegro.png)!important;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }       
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(101, 51, 7, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
+        }
+        
+        .navbar-collapse {
+            ul li {
+                text-align: center;
+                position: relative;
+                left: 60%;
+                width: 40%;
+                background-color: white;
+            }
+
+            .active {
+                position: relative;
+                font-size: 2.2vw;
+                color: $colorPrincipal!important;
+                letter-spacing: 0.2em;
+            }
+
+            a {
+                color: #000!important;
+
+                &:hover{
+                    color: #fff!important;
+                    background-color: $colorHover!important;
+                }
+            }
+
+            .reserva {
+                background-color: $colorReserva2!important;
+                color: #fff!important;
+
+                &:hover{
+                    color: $colorLetras !important;
+                    background-color: $colorHover!important;
+                }
+            }
+        }
+    }
+}

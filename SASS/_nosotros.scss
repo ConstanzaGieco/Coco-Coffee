@@ -1,0 +1,565 @@
+@import "keyframes";
+@import "variables";
+@import "mixins";
+
+
+/* NOSOTROS */
+
+.nosotros {
+    grid-column: 1/5;
+
+    .cuerpo {
+        display: grid;
+        grid-template-rows: 150px auto auto auto!important;
+
+        @include large_desktops{
+            grid-template-rows: 300px auto auto auto!important;
+        }
+
+        @include desktops{
+            grid-template-rows: 250px auto auto auto!important;
+        }
+
+        @include tablets{
+            grid-template-rows: 200px auto auto auto!important;
+        }
+
+        @include landscape_phones{
+            grid-template-rows: 200px auto auto auto!important;
+        }
+
+        @include phones_plus{
+            grid-template-rows: 200px auto auto auto!important;
+        }
+
+        .segunda {
+            grid-row: 2/3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 250px auto;
+            padding-bottom: 10%;
+
+            @include large_desktops{
+                grid-template-rows: auto auto;
+                padding-bottom: 3%;
+            }
+
+            @include desktops{
+                grid-template-rows: auto auto;
+                padding-bottom: 3%;
+            }
+
+            @include tablets {
+                grid-template-rows: auto auto;
+                padding-bottom: 3%;
+            }
+
+            @include landscape_phones{
+                grid-template-rows: auto auto;
+                padding-bottom: 5%;
+            }
+
+            @include phones_plus{
+                grid-template-rows: 420px auto;
+            }
+
+            @include phones_details{
+                grid-template-rows: 300px auto;
+            }
+
+            .intro {
+                grid-column: 1/4;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .titulo {
+                    grid-column: 1/2;
+                    padding: 10px;
+                    padding-top: 20px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+
+                    @include large_desktops {
+                        padding: 120px;
+                        padding-top: 60px;
+                    }
+
+                    @include desktops{
+                        padding: 80px;
+                        padding-top: 60px;
+                    }
+                    
+                    @include tablets{
+                        padding: 50px;
+                        padding-top: 60px;
+                    }
+
+                    @include landscape_phones{
+                        padding: 30px;
+                        padding-top: 40px;  
+                    }
+
+                    @include phones_plus{
+                        padding: 30px;
+                        padding-top: 40px;  
+                    }
+
+                    .titulo-principal {
+                        position: relative;
+                        font-size: 3vw;
+                        font-style: italic;
+                        color: $colorPrincipal;
+
+                        @include large_desktops {
+                            font-size: 2vw;
+                        }
+
+                        @include desktops{
+                            font-size: 2.5vw;
+                        }
+
+                        @include tablets{
+                            font-size: 2.5vw;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            display: inline;
+                            width: 20%;
+                            height: 2%;
+                            left: 5%;
+                            background: $colorPrincipal;
+                        }
+                    }
+
+                    .parrafo {
+                        font-size: 2.5vw;
+                        color: #000;
+                        text-align: justify;
+
+                        @include large_desktops {
+                            font-size: 1.5vw;
+                        }
+
+                        @include desktops{
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            font-size: 2vw;
+                        }
+                    }
+
+                    .pie-titulo {
+                        font-size: 3vw;
+                        font-style: italic;
+                        color: $colorPrincipal;
+                        text-align: center;
+
+                        @include large_desktops {
+                            font-size: 2vw;
+                        }
+
+                        @include desktops{
+                            font-size: 2.5vw;
+                        }
+
+                        @include tablets{
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+
+                .imagen {
+                    grid-column: 2/3;
+
+                    &::after{
+                        position: relative;
+                        display: block;
+                        content: "";
+                        width: 1.5px;
+                        height: 70%;
+                        background-color: $colorAfter;
+                        left: 30%;
+                        margin-top: -100%;
+                        z-index: 0;
+
+                        @include large_desktops {
+                            display: none;
+                        }
+
+                        @include desktops{
+                            height: 60%;
+                            margin-top: -70%;
+                        }
+
+                        @include tablets {
+                            height: 60%;
+                            margin-top: -70%;
+                        }
+
+                        @include landscape_phones{
+                            height: 60%;
+                            margin-top: -90%;
+                        }
+
+                        @include phones_plus{
+                            height: 60%;
+                            margin-top: -90%;
+                        }
+
+                        @include phones_details{
+                            height: 60%;
+                            margin-top: -90%;
+                        }
+                    }
+
+                    .fondo-uno {
+                        width: 70%;
+                        height: 60%;
+                        overflow: hidden;
+                        margin: 10%;
+                        background-image: url(../03.\ Imagenes/Fondooscurocarta.jpg);
+                        box-shadow: $boxShadow;
+                        animation-name: movimiento_abajo;
+                        animation-duration: 35s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: 10s;
+                    }
+
+                    .imagen-uno {
+                        position: relative;
+                        width: 50%;
+                        height: 60%;
+                        margin-top: -70%;
+                        left: 10%;
+                        z-index: 5;
+                        box-shadow: $boxShadow;
+                        animation-name: movimiento_lateral_lento;
+                        animation-duration: 20s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                        animation-timing-function: 10s;
+                    }
+                }
+            }
+
+            .cards {
+                grid-column: 1/4;
+                grid-row: 2/3;
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 3%;
+                padding: 3%;
+                background-color: $colorFondo;
+
+                @include large_desktops {
+                    padding: 5%;
+                    gap: 7%;
+                }
+
+                @include desktops {
+                    padding: 5%;
+                    gap: 10%;
+                }
+
+                @include tablets{
+                    padding: 5%;
+                }
+
+                @include landscape_phones{
+                    padding: 5%;
+                }
+
+                .card {
+                    box-shadow: $boxShadow;
+                    width: 18rem;
+
+                    @include large_desktops {
+                        width: 30rem;
+                    }
+
+                    .card-body {
+                        display: flex;
+                        flex-flow: column nowrap;
+                    }
+
+                    .card-img-top {
+                        margin-left: 10%;
+                        margin-top: 15%;
+                        height: 40vw;
+                        width: 80%;
+                        border: solid $colorAfter 3px;
+
+                        @include large_desktops{
+                            height: 20vw;
+                        }
+
+                        @include desktops {
+                            height: 20vw;
+                        }
+
+                        @include tablets{
+                            height: 30vw;
+                        }
+
+                        @include phones_details{
+                            height: 30vw;
+                        }
+
+                        @include landscape_phones{
+                            height: 35vw;
+                        }
+
+                        @include phones_plus{
+                            height: 35vw;
+                        }
+
+
+                    }
+
+                    .card-title {
+                        color: $colorAfter;
+                        text-align: center;
+                        height: 10vw;
+                        font-style: italic;
+                        font-size: 3vw;
+
+                        @include large_desktops{
+                            height: 6vw;
+                            font-size: 2vw;
+                        }
+
+                        @include desktops {
+                            height: 6vw;
+                            font-size: 2vw;
+                        }
+
+
+                        @include tablets{
+                            height: 10vw;
+                            font-size: 2.5vw;
+                        }
+
+                        @include landscape_phones{
+                            height: 10vw;
+                        }
+                        
+                        @include phones_plus{
+                            height: 10vw;
+                        }
+
+                        @include phones_details{
+                            height: 15vw;
+                            font-size: 4vw;
+                        }
+                    }
+
+                    .card-text {
+                        color: $colorAfter;
+                        text-align: center;
+                        height: 20vw;
+                        font-size: 2.5vw;
+
+                        @include large_desktops{
+                            height: 8vw;
+                            font-size: 1.5vw;
+                        }
+
+                        @include desktops {
+                            height: 8vw;
+                            font-size: 1.5vw;
+                        }
+
+                        @include tablets{
+                            height: 15vw;
+                            font-size: 2vw;
+                        }
+
+                        @include landscape_phones{
+                            height: 20vw;
+                            font-size: 2.5vw;
+                        }
+
+                        @include phones_plus{
+                            height: 20vw;
+                            font-size: 2.5vw;
+                        }
+
+                        @include phones_details{
+                            height: 30vw;
+                            font-size: 3vw;
+                        }
+                    }
+
+                    &:hover{
+                        transition: all 1s;
+                        background-color: $colorHover;
+                        .card-title, .card-text{
+                            color: #fff;
+                        }
+                    }
+
+                    .btn-primary {
+                        width: 100%;
+                        background-color: $colorAfter;
+                        border: solid $colorAfter 1px;
+                        font-size: 1.5vw;
+
+                        @include desktops {
+                            font-size: 1.5vw;
+                        }
+
+                        @include tablets{
+                            font-size: 2vw;
+                        }
+
+                        @include landscape_phones{
+                            font-size: 2.5vw;
+                        }
+
+                        @include phones_plus{
+                            font-size: 2.5vw;
+                        }
+
+                        &:hover, &:focus, &:active{
+                            width: 100%;
+                            background-color: $colorReserva2;
+                            border: solid $colorAfter 1px;
+                            box-shadow: $boxShadow ;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tercera {
+            grid-row: 3/4;
+            grid-column: 1/3;
+            background-image: url(../03.\ Imagenes/Fondooscurocarta.jpg);
+            height: 65vw;
+
+            @include large_desktops {
+                height: 45vw;
+            }
+
+            @include desktops{
+                height: 50vw;
+            }
+
+            @include tablets {
+                height: 50vw;
+            }
+
+            @include landscape_phones{
+                height: 55vw;
+            }
+            
+            @include phones_plus{
+                height: 55vw;
+            }
+
+            .carousel {
+                height: 100%;
+                width: 100%;
+                padding: 20px;
+
+                @include large_desktops{
+                    padding: 50px;
+                }
+
+                @include desktops{
+                    padding: 50px;
+                }
+
+                @include tablets {
+                    padding: 50px;
+                }
+
+                @include landscape_phones{
+                    padding: 40px;
+                }
+
+                @include phones_plus{
+                    padding: 40px;
+                }
+
+
+                @include phones_details{
+                    padding: 30px;
+                }
+                
+                img{
+                    height: 100%;
+                }
+
+                .carousel-inner {
+                    height: 100%;
+                }
+
+                .carousel-indicators [data-bs-target]{
+                    @include large_desktops{
+                        width: 80px;
+                        height: 6px;
+                        margin-bottom: 5%;
+                    }
+
+                    @include desktops {
+                        margin-bottom: 7%;
+                    }
+
+                    @include tablets{
+                        width: 80px;
+                        height: 6px;
+                        margin-bottom: 7%;
+                    }
+
+                    @include landscape_phones{
+                        width: 50px;
+                        height: 6px;;
+                    }
+
+                    @include phones_plus{
+                        width: 50px;
+                        height: 4px;
+                    }
+
+                    @include phones_details{
+                        width: 50px;
+                        height: 4px;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+
+        .quinta {
+            padding-top: 40px;
+
+            @include large_desktops{
+                padding-top: 50px;
+            }
+
+            @include desktops{
+                padding-top: 50px;
+            }
+
+            @include tablets{
+                padding-top: 50px;
+            }
+            
+            @include landscape_phones{
+                padding-top: 50px;
+            }
+
+            @include phones_plus {
+                padding-top: 50px;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,421 @@
+@import "keyframes";
+@import "variables";
+@import "mixins";
+
+
+/* CONTACTO */
+
+.contactanos {
+    background-color: $colorFondo;
+    grid-column: 1/5;
+
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(2, fr);
+        grid-template-rows: none;
+
+        .col-1 {
+            grid-column: 1/2;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+
+            @include large_desktops{
+                padding: 30px;
+            }
+
+            @include desktops{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-right: 30px;
+            }
+
+            @include tablets{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+            }
+
+            @include landscape_phones {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+            }
+
+            .card {
+                background-color: $colorReserva2;
+                border: solid $colorAfter 2px;
+
+                .card-img-top {
+                    width: 80%;
+                    margin-top: 20px;
+                    box-shadow: $boxShadowR;
+                    border: solid $colorAfter 2px;
+                }
+
+                .card-body{                  
+
+                    .card-title {
+                        font-size: 3vw;
+                        color: #fff;
+
+                        @include large_desktops {
+                            font-size: 2.5vw;
+                        }
+
+                        @include desktops{
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            font-size: 2vw;
+                        }
+                    }
+                    
+                    .card-text {
+                        font-size: 2vw;
+                        color: #fff;
+
+                        @include large_desktops{
+                            font-size: 1.5vw;
+                        }
+
+                        @include desktops{
+                            font-size: 1.5vw;
+                        }
+
+                        @include tablets {
+                            font-size: 1.5vw;
+                        }
+                    }
+
+                    .links {
+                        position: relative;
+                        top: 20%;
+                        font-size: 2vw;
+                        justify-content: center;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        gap: 2vw;
+                        background-color: rgb(40, 20, 2);
+                        border-radius: 2px;
+                        box-shadow: $boxShadowR;
+
+                        @include desktops{
+                            font-size: 1.5vw;
+                        }
+
+                        @include tablets{
+                            font-size: 1.5vw;
+                        }
+
+                        .link-index {
+                            color: #fff !important;
+
+                            @include large_desktops {
+                                font-size: 1.5vw;
+                            }
+                        }
+
+                        .arrow {
+                            width: 20%;
+
+                            @include large_desktops {
+                                width: 15%;
+                            }
+
+                            img {
+                                object-fit: cover;
+                                width: 75%;
+                                animation-name: movimiento_lateral;
+                                animation-duration: 10s;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-2 {
+            grid-column: 2/3;
+            padding-top: 40px;
+            width: 100%;
+            left: 20%;
+
+            @include large_desktops {
+                margin-top: 10%;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            @include desktops{
+                padding-top: 80px;
+            }
+
+            @include tablets{
+                padding-top: 60px;
+            }
+
+            @include landscape_phones {
+                padding-top: 60px;
+            }
+
+            .row{
+
+                @include large_desktops{
+                    gap: 20px;
+                }
+
+                @include desktops{
+                    gap: 10px;
+                }
+
+                @include tablets{
+                    gap: 10px;
+                }
+
+                .input-group {
+                    width: 100%;
+           
+                    input {
+                        font-size: 2vw;
+                        box-shadow: $boxShadowR;
+                        border-color: $colorPrincipal;
+                        color: $colorPrincipal;
+            
+                        @include large_desktops {
+                            font-size: 1.5vw;
+                        }
+
+                        &::placeholder{
+                            color: $colorPrincipal;
+                            font-size: 1.5vw;
+                        }
+
+                        &:focus{
+                            background-color: $colorFocusR;
+                            box-shadow: $boxShadowR;
+                            color: $colorPrincipal;
+                        }
+                    }
+                }
+                
+                .form-floating {
+                    margin-top: 0 !important;
+                    color: $colorPrincipal;
+                    font-size: 1.5vw;
+            
+                    @include large_desktops {
+                        height: 200px;
+                    }
+
+                    @include desktops{
+                        height: 170px;
+                    }
+
+                    @include tablets {
+                        height: 140px;
+                    }
+
+                    @include landscape_phones {
+                        height: 120px;
+                    }
+
+                    @include phones_plus {
+                        height: 100px;
+                    }
+            
+                    #floatingTextarea {
+                        border-color: $colorPrincipal;
+                        resize: none;
+                        font-size: 1.5vw;
+                        color: $colorPrincipal;
+                        height: 100%;            
+
+                        &:hover, &:active, &:focus{
+                            color: $colorPrincipal;
+                            border-color: $colorPrincipal;
+                            box-shadow: $boxShadowR;
+                        }
+
+                        &:focus{
+                            background-color: $colorFocusR;
+                            box-shadow: $boxShadowR;
+                            color: $colorPrincipal;
+                        }
+                    }
+                }
+            
+                .form-check {
+
+                    @include large_desktops{
+                        padding-left: 15%;
+                        padding-right: 15%;
+                        margin-top: 10%;
+                    }
+
+                    @include desktops {
+                        padding-left: 15%;
+                        padding-right: 15%;
+                    }
+
+                    @include tablets {
+                        padding-left: 15%;
+                    }
+
+                    @include landscape_phones{
+                        padding-left: 15%;
+                        margin-top: 10%;
+                    }
+
+                    @include phones_plus {
+                        padding-left: 15%;
+                    }
+
+                    @include phones_details{
+                        margin-top: 10%;
+                    }
+            
+                    .form-check-label {
+                        font-size: 2vw;
+                        text-align: center;
+            
+                        @include large_desktops {
+                            font-size: 1.5vw;
+                            padding-left: 10%;
+                        }
+
+                        @include desktops{
+                            font-size: 1.5vw;
+                            padding-left: 5%;
+                        }
+
+                        @include tablets{
+                            font-size: 1.5vw;
+                            padding-left: 5%;
+                        }
+
+                        @include landscape_phones{
+                            font-size: 1.5vw;
+                            padding-left: 5%;
+                        }
+
+                        @include phones_plus{
+                            font-size: 1.5vw;
+                            padding-left: 5%;
+                        }
+
+                        @include phones_details{
+                            font-size: 1.5vw;
+                            padding-left: 5%;
+                        }
+                    }
+
+                    .form-check-input{
+                        background-color: $colorLetras;
+                        border: solid $colorPrincipal;
+                        width: 10px;
+                        height: 10px;
+
+                        @include large_desktops {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @include desktops {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @include tablets {
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                        @include phones_details {
+                            margin-left: -3%;
+                        }
+
+                        @include phones_plus{
+                            width: 10px;
+                            height: 10px;
+                        }
+                        
+                        &:checked,
+                        &:focus {
+                            background-color: $colorPrincipal;
+                            box-shadow: $boxShadowR;
+                            border: $colorPrincipal;
+                            color: $colorPrincipal;
+                        }
+                    }
+                }
+
+                .col-12{
+                    text-align: center;
+                    margin-top: -1%;
+
+                    @include desktops{
+                        margin-top: 5%;
+                    }
+
+                    @include landscape_phones{
+                        margin-top: 10%;
+                    }
+
+                    @include phones_plus {
+                        margin-top: 10%;
+                    }
+
+                    .btn-primary {
+                        background-color: $colorAfter;
+                        border: solid $colorAfter 1px;
+                        width: 50%;
+                        font-size: 1.5vw;
+
+                        @include desktops{
+                            width: 60%;
+                            font-size: 2vw;
+                        }
+
+                        @include tablets{
+                            width: 60%;
+                            font-size: 2vw;
+                        }
+
+                        @include phones_details {
+                            width: 60%;
+                            font-size: 1.5vw;
+                        }
+                
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background-color: $colorReserva2;
+                            border: solid $colorAfter 1px;
+                            box-shadow: $boxShadow;
+                            width: 50%;
+
+                             @include desktops{
+                                width: 60%;
+                            }
+
+                            @include tablets{
+                                width: 60%;
+                            }
+
+                            @include phones_details {
+                                width: 60%;
+                            }
+
+                        }
+                    }
+                }                
+
+            }
+           
+        }
+    }
+}
