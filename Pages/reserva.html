@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva ~ Cocoffee</title>
+    <meta name="description" content="Reserva una mesa en la cafetería pet friendly de Del Bono Park ¿Qué esperas?">
+    <meta name="keywords" content="cafetería, reserva, mesa, pet friendly, mascota, café, mediatarde">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../03. Imagenes/Logo-blanco.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <link rel="stylesheet" href="../SASS/main.css">
+
+</head>
+
+<body>
+    
+    <div class="grid-layout">
+        <header>
+            <div class="imagen-principal-logo-box">
+                <img src="../03. Imagenes/Reserva.jpg" alt="Cocoffee" class="imagen-principal">
+                <div class="overlay">
+                    <h1>COCOFFEE</h1>
+                </div>
+                <div class="arrow">
+                    <button class="scroll-button">Scroll</button>
+                </div>
+            </div>
+        
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html" target="_blank"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html" target="_blank">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html" target="_blank">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./carta.html" target="_blank">Carta online</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contactanos.html" target="_blank">Contactanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reserva" href="./reserva.html" target="_self">Reserva</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main class="reserva">
+            <div class="cuerpo-reserva">
+                <section class="primera">
+                    <div class="container text-center">
+                        <div class="row">
+                            <h3 class="row1">Cafetería en San Juan</h3>
+                            <h1 class="row2">COCOFFEE</h1>
+                            <h3 class="row3">Pet friendly</h3>
+                            <h2 class="row4">Reserva tu mesa</h3>
+                            <p class="row5">Se tomarán 15 minutos como límite de tolerancia ante la tardanza.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="segunda">
+                    <form class="row g-3 requires-validation container-fluid" novalidate>
+                        <div class="input-group mb-3 has-validation">
+                            <span class="input-group-text" id="basic-addon1">😄</span>
+                            <input type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Username" aria-describedby="basic-addon1" required>
+                            <div class="invalid-feedback">El campo no puede estar vacío.</div>
+                        </div>
+
+                        <div class="input-group mb-3 has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">👥</span>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuario" aria-label="Username" required>
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="Servidor" aria-label="Server" required>
+                            <div class="invalid-feedback">El campo no puede estar vacío.</div>
+                        </div>
+                       
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">🫂</span>
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                    <option selected disabled value="">Cantidad</option>
+                                    <option value="01">1 persona</option>
+                                    <option value="02">2 personas</option>
+                                    <option value="03">3 personas</option>
+                                    <option value="04">4 personas</option>
+                                    <option value="05">5 personas</option>
+                                    <option value="06">6 personas</option>
+                                </select>
+                                <label for="floatingSelect">Cantidad de personas.</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">🐶🐱</span>
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                    <option selected disabled value="">Cantidad</option>
+                                    <option value="01">Ninguna</option>
+                                    <option value="02">1 mascota</option>
+                                    <option value="03">2 mascotas</option>
+                                </select>
+                                <label for="floatingSelect">Cantidad de mascotas.</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">📆</span>
+                            <div class="form-floating">
+                                <input class="form-control" id="date" name="date" placeholder="Elegí el día." type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">🕔</span>
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                    <option selected disabled value="">Horario</option>
+                                    <option value="01">09:00</option>
+                                    <option value="02">10:00</option>
+                                    <option value="03">11:00</option>
+                                    <option value="04">12:00</option>
+                                    <option value="05">13:00</option>
+                                    <option value="06">14:00</option>
+                                    <option value="07">15:00</option>
+                                    <option value="08">16:00</option>
+                                    <option value="09">17:00</option>
+                                    <option value="10">18:00</option>
+                                    <option value="11">19:00</option>
+                                    <option value="12">20:00</option>
+                                    <option value="13">21:00</option>
+                                </select>
+                                <label for="floatingSelect">Elegí el horario.</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" disabled placeholder="Lugar adaptado para personas con discapacidad.">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" disabled
+                                placeholder="Lugar al aire libre para personas fumadoras.">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" disabled
+                                placeholder="Preferís una mesa adentro.">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox" disabled
+                                placeholder="Preferís una mesa al aire libre.">
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label">Confirmo que los datos ingresados son correctos.</label>
+                            <div class="invalid-feedback">Por favor, confirmar que los datos ingresados son correctos.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Reservar</button>
+                        </div>
+
+                    </form>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="container-fluid">
+            <div class="row1">
+                <div class="container text-center" id="primero">
+                    <a href="../index.html" target="_blank"><img src="../03. Imagenes/LogoBlanco.png" alt="Logo Cocoffee"></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./nosotros.html" class="nav-link p-0" target="_blank">Nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./carta.html" class="nav-link p-0" target="_blank">Carta Online</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./contactanos.html" class="nav-link p-0" target="_blank">Contactanos</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./reserva.html" class="nav-link p-0" target="_self">Reserva</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-fluid" id="segundo">
+                    <form>
+                        <h1>Suscribite para conocer nuestras promociones.</h1>
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row2 border-top align-items-center">
+                <div class="col text-center">
+                    <p>© 2023 Constanza Gieco.</p>
+                </div>
+                <div class="col py-2">
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3">
+                            <img src="../03. Imagenes/Instagram.png" alt="Instagram">
+                        </li>
+                        <li class="ms-3">
+                            <img src="../03. Imagenes/Facebook.png" alt="Facebook">
+                        </li>
+                        <li class="ms-3">
+                            <img src="../03. Imagenes/Twitter.png" alt="Twitter">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    
+    <!-- HEADER CAMBIO A BLANCO -->
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+        })
+    </script>
+    
+    <!-- ANIMACIONES "AOS" -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+
+    <!-- CALENDARIO BOOTSTRAP -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script>
+        $(document).ready(function () {
+            var date_input = $('input[name="date"]');
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+                startDate: "-0d",
+                endDate: "+15d",
+            })
+        })
+    </script>
+
+    <!-- VALIDACIÓN FORMULARIO -->
+    <script>
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.requires-validation')
+            Array.from(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+</body>
+</html>
