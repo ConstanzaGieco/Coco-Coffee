@@ -1281,6 +1281,9 @@
     font-size: 2vw;
   }
 }
+.cuerpo .quinta .pie-imagenes .imagenes-redes .redes .instagram:hover, .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .instagram:link, .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .instagram:visited {
+  color: #653307;
+}
 .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .twitter {
   width: 100%;
   font-size: 2.2vw;
@@ -1304,6 +1307,9 @@
   .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .twitter {
     font-size: 2vw;
   }
+}
+.cuerpo .quinta .pie-imagenes .imagenes-redes .redes .twitter:hover, .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .twitter:link, .cuerpo .quinta .pie-imagenes .imagenes-redes .redes .twitter:visited {
+  color: #653307;
 }
 .cuerpo .quinta .pie-imagenes .imagenes-redes .imagenes {
   grid-row: 2/3;

@@ -1142,6 +1142,10 @@
                         @include tablets {
                             font-size: 2vw;
                         }
+
+                        &:hover, &:link, &:visited{
+                            color: $colorPrincipal;
+                        }
                     }
 
                     .twitter {
@@ -1163,6 +1167,10 @@
 
                         @include tablets {
                             font-size: 2vw;
+                        }
+
+                        &:hover, &:link, &:visited{
+                            color: $colorPrincipal;
                         }
                     }
                 }
