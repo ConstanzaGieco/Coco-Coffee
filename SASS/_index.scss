@@ -53,9 +53,11 @@
 
     a.red1,
     a.red2 {
+        color: $colorPrincipal;
 
         &:hover,
-        &:visited {
+        &:visited,
+        &:link {
             color: $colorPrincipal;
         }
     }
