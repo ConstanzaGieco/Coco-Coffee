@@ -51,13 +51,12 @@
         }
     }
 
-    a.red1,
-    a.red2 {
+    .red1,
+    .red2 {
         color: $colorPrincipal;
 
         &:hover,
-        &:visited,
-        &:link {
+        &:visited {
             color: $colorPrincipal;
         }
     }

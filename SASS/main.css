@@ -112,14 +112,13 @@
   color: #653307;
   border-bottom: 1px solid;
 }
-.cuerpo a.red1,
-.cuerpo a.red2 {
+.cuerpo .red1,
+.cuerpo .red2 {
   color: #653307;
 }
-.cuerpo a.red1:hover, .cuerpo a.red1:visited, .cuerpo a.red1:link,
-.cuerpo a.red2:hover,
-.cuerpo a.red2:visited,
-.cuerpo a.red2:link {
+.cuerpo .red1:hover, .cuerpo .red1:visited,
+.cuerpo .red2:hover,
+.cuerpo .red2:visited {
   color: #653307;
 }
 .cuerpo .primera {
